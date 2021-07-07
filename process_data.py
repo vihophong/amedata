@@ -23,9 +23,9 @@ for i in range(len(datain)):
 		 "P1n": datain[i]["P1n"],"D_P1n": datain[i]["D_P1n"],
 		 "P2n": datain[i]["P2n"],"D_P2n": datain[i]["D_P2n"],
 		 "P3n": datain[i]["P3n"],"D_P3n": datain[i]["D_P3n"],
-		 "new_Qb": 999999.0,"new_D_Qb": 999999.0,
-		 "new_Qb1n": 999999.0,"new_D_Qb1n": 999999.0,
-		 "new_Qb2n": 999999.0,"new_D_Qb2n": 999999.0
+		 "new_Qb": 0,"new_D_Qb": 0,
+		 "new_Qb1n": 0,"new_D_Qb1n": 0,
+		 "new_Qb2n": 0,"new_D_Qb2n": 0
 		 })
 	else:
 		Qbn_entry = next((item for item in data_Qbn if (item["A"] == datain[i]["A"] and item["Z"] == datain[i]["Z"] and item["EL"] == datain[i]["EL"])), None)
