@@ -68,6 +68,8 @@ for i in range(len(datain)):
 			Qb2n = 0
 			D_Qb2n = 0
 		if (Qb_entry["Qb"]==999999):
+			Qb_entry["Qb"]=0
+			Qb_entry["DQb"]=0
 			Qbn = 0
 			D_Qbn = 0
 			Qb2n = 0
