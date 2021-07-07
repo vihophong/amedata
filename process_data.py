@@ -67,6 +67,11 @@ for i in range(len(datain)):
 		if (Qb2n<1):
 			Qb2n = 0
 			D_Qb2n = 0
+		if (Qb_entry["Qb"]==999999):
+			Qbn = 0
+			D_Qbn = 0
+			Qb2n = 0
+			D_Qb2n = 0
 		data1.append({"N-Z": datain[i]["N-Z"],"N": datain[i]["N"],"Z": datain[i]["Z"],"A": datain[i]["A"],"EL": datain[i]["EL"],"liso": datain[i]["liso"],
 		 "Ex": datain[i]["Ex"],"D_Ex": datain[i]["D_Ex"],
 		 "Bm": datain[i]["Bm"],"D_Bm": datain[i]["D_Bm"],
