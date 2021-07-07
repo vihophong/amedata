@@ -3593,19 +3593,3 @@
 0294 Ts 117    6103#      978#       1460#      785#          *                 18975#      966#      14017#      860#      17863#      944#
  294 Og 118    7553#      899#       2397#      955#          *                 16410#      868#      12531#      814#      17723#      833#
 0295 Og 118    6023#      857#       2317#      883#          *                 17652#     1017#      12612#      936#      18882#     1005#
-1
- USE of ARRAYS :
-     4064 / 4450 masses (total)           0 /    50 stand. added in Ph4
-        5 /   20 option cards            18 /    29 secondaries in CHAIN
-    16679 /17500 data in N4            2760 /  3300 secondaries in CHAIN
- NORMAL END OF PHASE 4                                    time is    1.
-
-
- Program used  ph4dl  only           
-    Data used  a0dsslgw.inv       
-                                      
- Ending Job  a0p4l2gw.output  on   
-The current date is: Wed 03/03/2021 
-Enter the new date: (mm-dd-yy)  
-The current time is: 22:41:38.90
-Enter the new time:  
