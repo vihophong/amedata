@@ -2,7 +2,7 @@ from __future__ import print_function
 import struct
 import numpy as np
 
-file1 = open("rct2_1.mas20.txt")
+file1 = open("rct2.mas12.txt")
 data1 = []
 iline = 0
 flagread = 0
@@ -61,5 +61,5 @@ for i in range(len(data1)):
 		data1[i]["Qpa"],data1[i]["D_Qpa"],data1[i]["is_ex_Qpa"],
 		data1[i]["Qna"],data1[i]["D_Qna"],data1[i]["is_ex_Qna"]))
 
-np.save("rct2_1.mas20.npy",data1)
+np.save("rct2.mas12.npy",data1)
 

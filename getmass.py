@@ -2,7 +2,7 @@ from __future__ import print_function
 import struct
 import numpy as np
 
-file1 = open("mass_1.mas20.txt")
+file1 = open("mass.mas12.txt")
 data1 = []
 iline = 0
 flagread = 0
@@ -66,6 +66,6 @@ for i in range(len(data1)):
 		data1[i]["EL"],data1[i]["O"],data1[i]["M"],data1[i]["DM"],data1[i]["is_ex_M"],data1[i]["B"],data1[i]["DB"],data1[i]["is_ex_B"],
 		data1[i]["Decay"],data1[i]["Qb"],data1[i]["DQb"],data1[i]["is_ex_Qb"],data1[i]["A2"],data1[i]["AM"],data1[i]["DAM"],data1[i]["is_ex_AM"]))
 
-np.save("mass_1.mas20.npy",data1)
+np.save("mass.mas12.npy",data1)
 
 

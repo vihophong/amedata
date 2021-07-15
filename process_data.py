@@ -5,9 +5,9 @@ import math
 
 datain = np.load("delayedn_eval.npy",allow_pickle='TRUE')
 
-data_masstable = np.load("mass_1.mas20.npy",allow_pickle='TRUE')
-data_Qbn = np.load("rct1.mas20.npy",allow_pickle='TRUE')
-data_Sn = np.load("rct2_1.mas20.npy",allow_pickle='TRUE')
+data_masstable = np.load("mass.mas12.npy",allow_pickle='TRUE')
+data_Qbn = np.load("rct1.mas12.npy",allow_pickle='TRUE')
+data_Sn = np.load("rct2.mas12.npy",allow_pickle='TRUE')
 
 data1 = []
 
@@ -30,16 +30,17 @@ for i in range(len(datain)):
 	else:
 		Qbn_entry = next((item for item in data_Qbn if (item["A"] == datain[i]["A"] and item["Z"] == datain[i]["Z"] and item["EL"] == datain[i]["EL"])), None)
 		if (Qbn_entry==None):
-			print("Error")
+			print("Error1",datain[i]["A"],datain[i]["Z"])
+			continue
 		Qb_entry = next((item for item in data_masstable if (item["A"] == datain[i]["A"] and item["Z"] == datain[i]["Z"] and item["EL"] == datain[i]["EL"])), None)
 		if (Qb_entry==None):
-			print("Error")
+			print("Error2")
 		Sn_daugter_entry = next((item for item in data_Sn if (item["A"] == datain[i]["A"] and item["Z"] == datain[i]["Z"]+1)), None)
 		if (Sn_daugter_entry==None):
-			print("Error")
+			print("Error3")
 		S2n_daugter_entry = next((item for item in data_Qbn if (item["A"] == datain[i]["A"] and item["Z"] == datain[i]["Z"]+1)), None)
 		if (S2n_daugter_entry==None):
-			print("Error")
+			print("Error4")
 		#print(Qbn_entry["Qbn"]-datain[i]["Qb1n"])
 		#print(Qbn_entry["D_Qbn"]-datain[i]["D_Qb1n"])
 		Qbn = Qb_entry["Qb"]-Sn_daugter_entry["Sn"]
@@ -106,5 +107,5 @@ for i in range(len(data1)):
 		data1[i]["new_Qb1n"],data1[i]["new_D_Qb1n"],
 		data1[i]["new_Qb2n"],data1[i]["new_D_Qb2n"]
 		))
-np.save("delayedn_eval_with_ame20.npy",data1)
+np.save("delayedn_eval_with_ame12.npy",data1)
 
